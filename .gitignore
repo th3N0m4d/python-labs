@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+*.egg-info/
+dist/
+build/
+
+# Distribution / packaging
+.eggs/
+develop-eggs/
+.installed.cfg
+pip-wheel-metadata/
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+
+# MyPy, Pyright, Pylance
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+typings/
+
+# VS Code se
