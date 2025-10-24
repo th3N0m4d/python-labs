@@ -26,7 +26,7 @@ def guessing_game():
     num_attempts = 0
     num = rand_int(lower_bound, upper_bound)
     
-    while num_attempts <= 7:
+    while num_attempts < 7:
         
         num_attempts+=1
         
