@@ -1,4 +1,3 @@
-from guessing_game import guessing_game
+import hangman_game
 
-guessing_game()
-
+hangman_game.play()
