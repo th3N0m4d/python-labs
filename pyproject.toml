@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "PCAP & PCPP1 Exam Preparation - A series of Python projects for learning and certification prep"
 authors = ["Edielton Estrela Dantas <edielton.dantas@hotmail.com>"]
 readme = "README.md"
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -11,23 +12,36 @@ python = "^3.9"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.2"
 black = "^24.0.0"
+pytest-cov = "^5.0.0"
 
+# 🎮 Scripts section - like npm scripts
 [tool.poetry.scripts]
-hangman = "hangman_game:play"
-guessing-game = "guessing_game:guessing_game"
+hangman = "src.hangman_game:play"
+guessing-game = "src.guessing_game:guessing_game"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+# 🔧 Tool configurations
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
 [tool.black]
 line-length = 88
-target-version = ['py38']
-
-[tool.pytest.ini_options]
-testpaths = [
-    ".",
-]
-python_files = "test_*.py"
-python_classes = "Test*"
-python_functions = "test_*"
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
