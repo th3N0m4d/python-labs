@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "python-labs"
+version = "0.1.0"
+description = "PCAP & PCPP1 Exam Preparation - A series of Python projects for learning and certification prep"
+authors = ["Edielton Estrela Dantas <edielton.dantas@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+black = "^24.0.0"
+
+[tool.poetry.scripts]
+hangman = "hangman_game:play"
+guessing-game = "guessing_game:guessing_game"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = [
+    ".",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
