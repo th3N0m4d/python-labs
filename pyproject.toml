@@ -16,7 +16,7 @@ pytest-cov = "^5.0.0"
 
 # 🎮 Scripts section - like npm scripts
 [tool.poetry.scripts]
-hangman = "src.hangman_game:play"
+hangman = "src.hangman.main:main"
 guessing-game = "src.guessing_game:guessing_game"
 
 [build-system]
